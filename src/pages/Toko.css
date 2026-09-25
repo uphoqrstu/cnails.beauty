@@ -1,0 +1,394 @@
+/* ===== TOKO PAGE ===== */
+
+/* Sync Banner */
+.sync-banner {
+  background: linear-gradient(135deg, #fff, var(--pink-pale));
+  border: 1px solid rgba(248,164,200,0.25);
+  border-radius: 20px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 36px 0;
+  box-shadow: var(--shadow-soft);
+}
+
+.sync-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--pink-primary), var(--pink-deep));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.sync-text {
+  flex: 1;
+}
+
+.sync-text h3 {
+  font-size: 1.15rem;
+  color: var(--dark);
+  margin-bottom: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.sync-text p {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.sync-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.sync-badges span {
+  font-size: 0.8rem;
+  color: #2d7a3a;
+  font-weight: 600;
+  background: #e8f5e9;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* Platforms Grid */
+.platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.platform-card {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(248,164,200,0.15);
+  transition: all 0.35s ease;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  background: white;
+}
+
+.platform-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Platform Header */
+.platform-header {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: white;
+}
+
+.platform-icon-wrap {
+  width: 52px;
+  height: 52px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  backdrop-filter: blur(10px);
+}
+
+.platform-header-text h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 2px;
+}
+
+.platform-header-text span {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.8);
+  font-weight: 400;
+}
+
+/* Platform Body */
+.platform-body {
+  padding: 20px;
+}
+
+.platform-desc {
+  font-size: 0.84rem;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+/* Stats */
+.platform-stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-top: 1px solid var(--pink-pale);
+  border-bottom: 1px solid var(--pink-pale);
+  margin-bottom: 16px;
+}
+
+.pstat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.pstat i {
+  color: var(--gold);
+  font-size: 0.85rem;
+  margin-bottom: 2px;
+}
+
+.pstat span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark);
+  font-family: 'Poppins', sans-serif;
+}
+
+.pstat small {
+  font-size: 0.7rem;
+  color: var(--gray);
+}
+
+/* Features */
+.platform-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.feature-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--pink-dark);
+  background: var(--pink-pale);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.feature-tag i {
+  font-size: 0.65rem;
+}
+
+/* CTA Button */
+.platform-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.platform-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  filter: brightness(1.05);
+}
+
+.platform-cta i {
+  transition: transform 0.3s ease;
+}
+
+.platform-cta:hover i {
+  transform: translateX(4px);
+}
+
+/* How To Buy */
+.how-to-buy {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+}
+
+.step-card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px 20px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(248,164,200,0.15);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.step-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--pink-light);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.step-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--pink-light), rgba(248,164,200,0.4));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  font-size: 1.3rem;
+  color: var(--pink-dark);
+  transition: all 0.3s ease;
+}
+
+.step-card:hover .step-icon {
+  background: linear-gradient(135deg, var(--pink-primary), var(--pink-deep));
+  color: white;
+  transform: scale(1.1);
+}
+
+.step-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.step-card p {
+  font-size: 0.83rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.step-arrow {
+  position: absolute;
+  top: 50%;
+  right: -14px;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background: var(--pink-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.7rem;
+  z-index: 1;
+  box-shadow: 0 2px 10px rgba(248,164,200,0.5);
+}
+
+/* Store Info */
+.store-info-section {
+  padding: 20px 0 60px;
+}
+
+.store-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.store-info-card {
+  background: white;
+  border-radius: 18px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(248,164,200,0.15);
+  transition: all 0.3s ease;
+}
+
+.store-info-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--pink-primary);
+}
+
+.si-icon {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, var(--pink-light), rgba(248,164,200,0.3));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  font-size: 1.2rem;
+  color: var(--pink-dark);
+}
+
+.store-info-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+.store-info-card p {
+  font-size: 0.82rem;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .platforms-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
+  .step-arrow { display: none; }
+  .store-info-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .sync-banner { flex-direction: column; text-align: center; }
+  .sync-badges { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+  .platforms-grid { grid-template-columns: 1fr; margin: 0 auto 60px; }
+  .steps-grid { grid-template-columns: 1fr; max-width: 100%; margin: 0 auto; }
+  .store-info-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .store-info-grid { grid-template-columns: 1fr; }
+  .how-to-buy { padding: 40px 0; }
+  .platform-card { max-width: 100%; }
+}

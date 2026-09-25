@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import FloatingButtons from './components/FloatingButtons';
+import Beranda from './pages/Beranda';
+import Produk from './pages/Produk';
+import Toko from './pages/Toko';
+import TentangKami from './pages/TentangKami';
 
 function App() {
+  const [activePage, setActivePage] = useState('beranda');
+
+  const renderPage = () => {
+    switch (activePage) {
+      case 'beranda': return <Beranda setActivePage={setActivePage} />;
+      case 'produk': return <Produk />;
+      case 'toko': return <Toko />;
+      case 'tentang': return <TentangKami />;
+      default: return <Beranda setActivePage={setActivePage} />;
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar activePage={activePage} setActivePage={setActivePage} />
+      <main className="page-wrapper">
+        {renderPage()}
+      </main>
+      <Footer setActivePage={setActivePage} />
+      <FloatingButtons />
     </div>
   );
 }
