@@ -191,4 +191,5 @@ button {
 @media (max-width: 768px) {
   .section-title { font-size: 2rem; }
   .container { padding: 0 16px; }
+  .page-wrapper { padding-top: 80px; }
 }
