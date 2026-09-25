@@ -141,14 +141,16 @@
 .hero-marketplace {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .hero-marketplace > span {
   font-size: 0.82rem;
   color: var(--gray);
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .mp-badges {
@@ -755,6 +757,17 @@
   .showcase-thumbnails { grid-template-columns: repeat(3, 1fr); }
   .mp-banner-content h2 { font-size: 1.6rem; }
   .cta-banner h2 { font-size: 1.7rem; }
+  .hero-marketplace {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mp-badges {
+    justify-content: center;
+  }
+  .mp-badge {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
 }
 
 @media (max-width: 360px) {
